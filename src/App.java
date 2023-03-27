@@ -18,7 +18,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         Random random = new Random();
         int randomNumber = random.nextInt(3);
-        String url = endPoint[randomNumber];
+        String url = endPoint[0];
         var client = HttpClient.newHttpClient();
         URI link = URI.create(url);
         var req = HttpRequest.newBuilder(link).GET().build();
@@ -29,6 +29,7 @@ public class App {
         for (Map<String,String> movie : list) {
            var print = new Print();
            print.show(movie);
+           Thread.sleep(2000);
         }
     }
 
