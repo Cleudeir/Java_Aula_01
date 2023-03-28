@@ -1,8 +1,3 @@
-## Getting Started
-
-Aula 01 alura Imersão dev java!
-Request IMDB movies and show info inside Console
-
 ## Imersão Alura Aula 01
 
 ## Desafios
