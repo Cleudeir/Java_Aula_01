@@ -18,7 +18,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         Random random = new Random();
         int randomNumber = random.nextInt(3);
-        String url = endPoint[0];
+        String url = endPoint[randomNumber];
         var client = HttpClient.newHttpClient();
         URI link = URI.create(url);
         var req = HttpRequest.newBuilder(link).GET().build();

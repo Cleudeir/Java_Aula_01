@@ -24,7 +24,7 @@ public class Print {
     public void show(Map<String,String> item) throws IOException, InterruptedException {
         for (String key: item.keySet()) {
             var text = key + " : " + item.get(key);
-            if(key.equals("imDbRating")){              
+            if(key.equals("imDbRating")){
                 double doubleNumber = Double.parseDouble(item.get(key));
                 int star = (int) doubleNumber;
                 int noStar = (10 - star);
@@ -34,7 +34,7 @@ public class Print {
                 var img = new ImgToAscii();
                 var imgText = ImgToAscii.transform(item.get(key));
                 text = "\nASCII ART POSTER" + "\n"+ ANSI_WHITE + imgText + ANSI_RESET;
-            }         
+            }
             System.out.println(ANSI_GREEN + text + ANSI_RESET ) ;
         }
         System.out.println("\n███████████████████████████████████████████████████████████████████████████████████ \n");

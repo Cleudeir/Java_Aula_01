@@ -15,7 +15,7 @@ public class ImgToAscii {
 
     public static String transform (String url) throws IOException, InterruptedException{
         // doc https://www.filestack.com/docs/api/file/
-        String urlConvert = "https://process.filestackapi.com/" + System.getenv("API_KEY_FILESTACK") +"/ascii=c:false,b:black,r:true,s:50/" + url;
+        String urlConvert = "https://process.filestackapi.com/" + System.getenv("API_KEY_FILESTACK") +"/ascii=c:false,b:black,r:true,s:80/" + url;
         var client = HttpClient.newHttpClient();
         URI link = URI.create(urlConvert);
         var req = HttpRequest.newBuilder(link).GET().build();
